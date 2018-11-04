@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-const Questionnaire = new mongoose.Schema({
+const questionnaireSchema = new mongoose.Schema({
     id: {
         type: Number,
         unique: true
@@ -14,5 +14,7 @@ const Questionnaire = new mongoose.Schema({
 }, {
     timestamps: true
 });
+
+const Questionnaire = mongoose.model('Questionnaire', questionnaireSchema);
 
 module.exports = Questionnaire;
