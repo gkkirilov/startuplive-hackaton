@@ -52,7 +52,7 @@ const app = express();
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useNewUrlParser', true);
-mongoose.connect('mongodb://casey:casey1@ds151453.mlab.com:51453/maturi');
+mongoose.connect('mongodb://test:test123@ds145463.mlab.com:45463/startuplive');
 mongoose.connection.on('error', (err) => {
   console.error(err);
   console.log('%s MongoDB connection error. Please make sure MongoDB is running.', chalk.red('✗'));
@@ -82,7 +82,7 @@ app.use(session({
   secret: '123123123',
   cookie: { maxAge: 1209600000 }, // two weeks in milliseconds
   store: new MongoStore({
-    url: 'mongodb://casey:casey1@ds151453.mlab.com:51453/maturi',
+    url: 'mongodb://test:test123@ds145463.mlab.com:45463/startuplive',
     autoReconnect: true,
   })
 }));
